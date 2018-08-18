@@ -32,10 +32,10 @@ int main() {
 			break;
 		case '2':	
 			std::cout << "aa" << std::endl;
-			//BubbleSort(arr, 5);
 			BubbleSort(CreateArray_10(), 10);
 			InsertionSort(CreateArray_10(), 10);
 			ShellSort(CreateArray_10(), 10);
+			QuickSort(CreateArray_10(), 0, 9);
 			break;
 		case 'q':
 			break;

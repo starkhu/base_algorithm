@@ -65,6 +65,8 @@ void InsertionSort(int data[], int len) {
 	PrintArray("after insertion sort, array is:", data, len);
 }
 
+//average time complexity: not certain
+//average space complexity: O(1)
 void ShellSort(int A[], int n){
 	int h = 0;
 	PrintArray("before shell sort, array is:", A, n);
@@ -87,8 +89,34 @@ void ShellSort(int A[], int n){
 				j = j - h;
 			}
 			A[j + h] = get;
-			PrintArray("array is:", A, n);
+			//PrintArray("array is:", A, n);
 		}
 		h = (h - 1) / 3; 
 	}
+	PrintArray("after shell sort, array is:", A, n);
+}
+
+//average time complexity: O(nlogn)
+//average space complexity: O(1)
+void QuickSort(int data[], int low, int high) {
+	if (data == nullptr || low > high) {
+		std::cout << "Invalid array" << std::endl;
+		return;
+	}
+	PrintArray("before quick sort, array is:", data, high - low + 1);
+	int left = low;
+	int right = high;
+	int key = data[left];
+	while (left != right) {
+		while (left < right && data[right] >= key)
+			right--;
+		data[left] = data[right];
+		while (left < right && data[left] <= key)
+			left++;
+		data[right] = data[left];
+	}
+	data[left] = key;
+	QuickSort(data, low, left - 1);
+	QuickSort(data, left + 1, high);
+	PrintArray("after quick sort, array is:", data, high - low + 1);
 }
