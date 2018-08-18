@@ -1,10 +1,11 @@
 #include<iostream>
 #include"time.h"
 #include"recursive_test.h"
+#include"sort.h"
 
 void CountTime(int t,void (*base_function)(int t)) {
-	clock_t start, end;
-	double duration;
+	clock_t start, end;  
+	double duration; 
 	start = clock();
 	(*base_function)(t);
 	end = clock();
@@ -14,6 +15,7 @@ void CountTime(int t,void (*base_function)(int t)) {
 
 void PrintOptions() {
 	std::cout << "1: recursive test" << std::endl;
+	std::cout << "2: sort test" << std::endl;
 }
 
 int main() {
@@ -21,12 +23,16 @@ int main() {
 	char options;
 	std::cout << "please input your options: ";
 	std::cin >> options;
+	int arr[5] = { 2, 34, 54, 3, 1 };
 	while (options != 'q') {
 		switch (options) {
 		case '1':
 			CountTime(1, RecursiveTest);
 			CountTime(2, RecursiveTest);
 			break;
+		case '2':	
+			//BubbleSort(arr, 5);
+			BubbleSort(CreateArray_10(), 10);
 		case 'q':
 			break;
 		}

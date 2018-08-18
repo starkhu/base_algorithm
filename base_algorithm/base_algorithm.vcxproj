@@ -18,6 +18,15 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="recursive_test.h" />
+    <ClInclude Include="sort.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="recursive_test.cpp" />
+    <ClCompile Include="sort.cpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8ED115DD-5D63-486F-8D92-D72844B1255A}</ProjectGuid>
     <RootNamespace>base_algorithm</RootNamespace>
@@ -109,13 +118,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\data_algorithm\data_algorithm\main.cpp" />
-    <ClCompile Include="..\..\data_algorithm\data_algorithm\recursive_test.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\data_algorithm\data_algorithm\recursive_test.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
