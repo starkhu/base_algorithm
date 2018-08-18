@@ -47,9 +47,12 @@ void BubbleSort(int data[], int len) {
 	PrintArray("after Bubble sort, array is:", data, len);
 }
 
+//average time complexity: O(n^2)
+//average space complexity: O(1)
 void InsertionSort(int data[], int len) {
 	PrintArray("before insertion sort, array is:", data, len);
 	if (data == nullptr || len <= 0) {
+		std::cout << "Invalid array" << std::endl;
 		return;
 	}
 	for (int i = 1; i < len; i++) {
@@ -60,4 +63,32 @@ void InsertionSort(int data[], int len) {
 		}
 	}
 	PrintArray("after insertion sort, array is:", data, len);
+}
+
+void ShellSort(int A[], int n){
+	int h = 0;
+	PrintArray("before shell sort, array is:", A, n);
+	while (h <= n) 
+	{
+		h = 3 * h + 1;
+	}
+	std::cout << "1 h is: " << h << std::endl;
+	while (h >= 1)
+	{
+		for (int i = h; i < n; i++)
+		{
+			std::cout << "h is: " << h << std::endl;
+			PrintArray("array is:", A, n);
+			int j = i - h;
+			int get = A[i];
+			while (j >= 0 && A[j] > get)
+			{
+				A[j + h] = A[j];
+				j = j - h;
+			}
+			A[j + h] = get;
+			PrintArray("array is:", A, n);
+		}
+		h = (h - 1) / 3; 
+	}
 }
