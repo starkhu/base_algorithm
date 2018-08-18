@@ -1,3 +1,4 @@
 #pragma once
 int* CreateArray_10();
-int* BubbleSort(int data[], int len);
+void BubbleSort(int data[], int len);
+void InsertionSort(int data[], int len);

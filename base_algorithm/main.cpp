@@ -31,8 +31,11 @@ int main() {
 			CountTime(2, RecursiveTest);
 			break;
 		case '2':	
+			std::cout << "aa" << std::endl;
 			//BubbleSort(arr, 5);
 			BubbleSort(CreateArray_10(), 10);
+			InsertionSort(CreateArray_10(), 10);
+			break;
 		case 'q':
 			break;
 		}

@@ -1,11 +1,12 @@
 #include<iostream>
 #include<vector>
+#include<string>
 
 //std::vector<int> arr;
 int arr[10];
 
-void PrintArray(int data[], int len) {
-	std::cout << "Array is:" << std::endl;
+void PrintArray(std::string str, int data[], int len) {
+	std::cout << str << std::endl;
 	for (int i = 0; i < len; i++)
 		std::cout << data[i] << " ";
 	std::cout << std::endl;
@@ -27,10 +28,11 @@ int* CreateArray_10() {
 
 //average time complexity: O(n^2)
 //average space complexity: O(1)
-int* BubbleSort(int data[], int len) {
-	PrintArray(data, len);
+void BubbleSort(int data[], int len) {
+	std::cout << "bubble sort" << std::endl;
+	PrintArray("berore Bubble sort,array is:",data, len);
 	if (data == nullptr || len <= 0)
-		return nullptr;
+		return;
 	for (int i = 0; i < len; i++) {
 		int flag = 0;
 		for (int j = 0; j < len - i - 1; j++) {
@@ -42,7 +44,20 @@ int* BubbleSort(int data[], int len) {
 		if (flag == 0)
 			break;
 	}
-	PrintArray(data, len);
-	return data;
+	PrintArray("after Bubble sort, array is:", data, len);
+}
 
+void InsertionSort(int data[], int len) {
+	PrintArray("before insertion sort, array is:", data, len);
+	if (data == nullptr || len <= 0) {
+		return;
+	}
+	for (int i = 1; i < len; i++) {
+		int j = i;
+		while (j >= 1 && data[j - 1] > data[j]) {
+			Swap(data, j - 1, j);
+			j--;
+		}
+	}
+	PrintArray("after insertion sort, array is:", data, len);
 }
