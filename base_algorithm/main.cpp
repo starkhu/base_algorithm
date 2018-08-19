@@ -2,6 +2,7 @@
 #include"time.h"
 #include"recursive_test.h"
 #include"sort.h"
+#include"binary_search.h"
 
 void CountTime(int t,void (*base_function)(int t)) {
 	clock_t start, end;  
@@ -16,6 +17,7 @@ void CountTime(int t,void (*base_function)(int t)) {
 void PrintOptions() {
 	std::cout << "1: recursive test" << std::endl;
 	std::cout << "2: sort test" << std::endl;
+	std::cout << "3: binary search test" << std::endl;
 }
 
 int main() {
@@ -23,7 +25,7 @@ int main() {
 	char options;
 	std::cout << "please input your options: ";
 	std::cin >> options;
-	int arr[5] = { 2, 34, 54, 3, 1 };
+	int arr[8] = {4, 5, 6, 7, 8, 1, 2, 3};
 	while (options != 'q') {
 		switch (options) {
 		case '1':
@@ -31,11 +33,14 @@ int main() {
 			CountTime(2, RecursiveTest);
 			break;
 		case '2':	
-			std::cout << "aa" << std::endl;
 			BubbleSort(CreateArray_10(), 10);
 			InsertionSort(CreateArray_10(), 10);
 			ShellSort(CreateArray_10(), 10);
 			QuickSort(CreateArray_10(), 0, 9);
+			break;
+		case '3':
+			BinarySearch<int>(arr, 7);
+			//BinarySearch<int>(arr, 7);
 			break;
 		case 'q':
 			break;

@@ -99,8 +99,8 @@ void ShellSort(int A[], int n){
 //average space complexity: O(1)
 void QuickSort(int data[], int low, int high) {
 	if (data == nullptr || low > high) {
-		throw new std::exception("Invalid Array");
-		//std::cout << "Invalid array" << std::endl;
+		//throw new std::exception("Invalid Array");
+		std::cout << "Invalid array" << std::endl;
 		return;
 	}
 	PrintArray("before quick sort, array is:", data, high - low + 1);
@@ -114,6 +114,7 @@ void QuickSort(int data[], int low, int high) {
 		while (left < right && data[left] <= key)
 			left++;
 		data[right] = data[left];
+		// system("pause");
 	}
 	data[left] = key;
 	QuickSort(data, low, left - 1);
