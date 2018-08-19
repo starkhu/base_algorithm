@@ -25,7 +25,7 @@ int main() {
 	char options;
 	std::cout << "please input your options: ";
 	std::cin >> options;
-	int arr[8] = {4, 5, 6, 7, 8, 1, 2, 3};
+	int arr[4] = {1, 1, 1, 1};
 	while (options != 'q') {
 		switch (options) {
 		case '1':
@@ -40,7 +40,6 @@ int main() {
 			break;
 		case '3':
 			BinarySearch<int>(arr, 7);
-			//BinarySearch<int>(arr, 7);
 			break;
 		case 'q':
 			break;

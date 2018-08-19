@@ -3,6 +3,8 @@
 
 template<typename T>
 	void BinarySearch(T arr[], int len);
+template<typename T>
+	int MinInOrder(T arr[], int head, int tail);
 
 //find the smallest number in the rotated array.
 template<typename T>
@@ -14,19 +16,31 @@ void BinarySearch(T arr[], int len) {
 	//T* tail = &arr[len - 1];
 	T head = 0;
 	T tail = len - 1;
-	T mid = (head + tail) / 2;
-	while (head + 1 != tail) {
-		std::cout << "head is:" << head << std::endl;
-		std::cout << "tail is:" << tail << std::endl;
-		std::cout << "mid is:" << mid << std::endl;
-		if (arr[mid] < arr[head]) {
+	T mid = head;
+	while (arr[head] < arr[mid]) {
+		if (tail - head == 1) {
+			mid = tail;
+			break;
+		}
+		if (arr[head] == arr[tail] && arr[head] == arr[mid])
+			mid = MinInOrder(arr, head, tail);
+		if (arr[mid] <= arr[head]) {
 			tail = mid;
 		}
-		else if (arr[mid] > arr[head]) {
+		else if (arr[mid] >= arr[head]) {
 			head = mid;
 		}
 		mid = (head + tail) / 2;
 		//system("pause");
 	}
-	std::cout << "the smallest number is: " << arr[tail] << std::endl;
+	std::cout << "the smallest number is: " << arr[mid] << std::endl;
+}
+template<typename T>
+int MinInOrder(T arr[], int head, int tail) {
+	T flag = arr[head];
+	for (int i = head; i < tail; i++) {
+		if (arr[i] < flag)
+			return i;
+	}
+	return head;
 }
