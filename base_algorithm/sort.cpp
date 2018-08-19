@@ -29,7 +29,6 @@ int* CreateArray_10() {
 //average time complexity: O(n^2)
 //average space complexity: O(1)
 void BubbleSort(int data[], int len) {
-	std::cout << "bubble sort" << std::endl;
 	PrintArray("berore Bubble sort,array is:",data, len);
 	if (data == nullptr || len <= 0)
 		return;
@@ -100,7 +99,8 @@ void ShellSort(int A[], int n){
 //average space complexity: O(1)
 void QuickSort(int data[], int low, int high) {
 	if (data == nullptr || low > high) {
-		std::cout << "Invalid array" << std::endl;
+		throw new std::exception("Invalid Array");
+		//std::cout << "Invalid array" << std::endl;
 		return;
 	}
 	PrintArray("before quick sort, array is:", data, high - low + 1);
