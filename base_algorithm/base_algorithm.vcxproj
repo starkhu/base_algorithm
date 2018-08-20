@@ -19,12 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="binary_operation.h" />
     <ClInclude Include="binary_search.h" />
     <ClInclude Include="dynamic_planning.h" />
     <ClInclude Include="recursive_test.h" />
     <ClInclude Include="sort.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="binary_operation.cpp" />
     <ClCompile Include="binary_search.cpp" />
     <ClCompile Include="dynamic_planning.cpp" />
     <ClCompile Include="main.cpp" />

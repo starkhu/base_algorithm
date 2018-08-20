@@ -4,6 +4,7 @@
 #include"sort.h"
 #include"binary_search.h"
 #include"dynamic_planning.h"
+#include"binary_operation.h"
 
 void CountTime(int t,void (*base_function)(int t)) {
 	clock_t start, end;  
@@ -20,6 +21,7 @@ void PrintOptions() {
 	std::cout << "2: sort test" << std::endl;
 	std::cout << "3: binary search test" << std::endl;
 	std::cout << "4: dynamic planning test" << std::endl;
+	std::cout << "5: binary operaion test" << std::endl;
 }
 
 int main() {
@@ -45,6 +47,14 @@ int main() {
 			break;
 		case '4':
 			std::cout << "max product is: " << CutRope() << std::endl;
+		case '5':
+			int num;
+			std::cout << "please input a num: ";
+			std::cin >> num;
+			NumberOfOne_0(num);
+			BinaryOperation();
+			NumberOfOne_1(num);
+			NumberOfOne_2(num);
 		case 'q':
 			break;
 		}

@@ -27,6 +27,9 @@
     <ClInclude Include="dynamic_planning.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="binary_operation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="recursive_test.cpp">
@@ -42,6 +45,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="dynamic_planning.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="binary_operation.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
