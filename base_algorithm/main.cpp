@@ -3,6 +3,7 @@
 #include"recursive_test.h"
 #include"sort.h"
 #include"binary_search.h"
+#include"dynamic_planning.h"
 
 void CountTime(int t,void (*base_function)(int t)) {
 	clock_t start, end;  
@@ -18,6 +19,7 @@ void PrintOptions() {
 	std::cout << "1: recursive test" << std::endl;
 	std::cout << "2: sort test" << std::endl;
 	std::cout << "3: binary search test" << std::endl;
+	std::cout << "4: dynamic planning test" << std::endl;
 }
 
 int main() {
@@ -41,6 +43,8 @@ int main() {
 		case '3':
 			BinarySearch<int>(arr, 7);
 			break;
+		case '4':
+			std::cout << "max product is: " << CutRope() << std::endl;
 		case 'q':
 			break;
 		}
