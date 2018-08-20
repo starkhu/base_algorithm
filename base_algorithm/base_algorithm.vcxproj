@@ -22,6 +22,7 @@
     <ClInclude Include="binary_operation.h" />
     <ClInclude Include="binary_search.h" />
     <ClInclude Include="dynamic_planning.h" />
+    <ClInclude Include="power.h" />
     <ClInclude Include="recursive_test.h" />
     <ClInclude Include="sort.h" />
   </ItemGroup>
@@ -30,6 +31,7 @@
     <ClCompile Include="binary_search.cpp" />
     <ClCompile Include="dynamic_planning.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="power.cpp" />
     <ClCompile Include="recursive_test.cpp" />
     <ClCompile Include="sort.cpp" />
   </ItemGroup>

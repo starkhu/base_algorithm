@@ -5,6 +5,7 @@
 #include"binary_search.h"
 #include"dynamic_planning.h"
 #include"binary_operation.h"
+#include"power.h"
 
 void CountTime(int t,void (*base_function)(int t)) {
 	clock_t start, end;  
@@ -22,6 +23,7 @@ void PrintOptions() {
 	std::cout << "3: binary search test" << std::endl;
 	std::cout << "4: dynamic planning test" << std::endl;
 	std::cout << "5: binary operaion test" << std::endl;
+	std::cout << "6: power test" << std::endl;
 }
 
 int main() {
@@ -55,6 +57,9 @@ int main() {
 			BinaryOperation();
 			NumberOfOne_1(num);
 			NumberOfOne_2(num);
+		case '6':
+			//std::cout << Power(0.01, -7) << std::endl;
+			std::cout << Power_1(0.01, -7) << std::endl;
 		case 'q':
 			break;
 		}
