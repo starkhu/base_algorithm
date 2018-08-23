@@ -6,6 +6,7 @@
 #include"dynamic_planning.h"
 #include"binary_operation.h"
 #include"power.h"
+#include"big_number.h"
 
 void CountTime(int t,void (*base_function)(int t)) {
 	clock_t start, end;  
@@ -24,6 +25,7 @@ void PrintOptions() {
 	std::cout << "4: dynamic planning test" << std::endl;
 	std::cout << "5: binary operaion test" << std::endl;
 	std::cout << "6: power test" << std::endl;
+	std::cout << "7: big number test" << std::endl;
 }
 
 int main() {
@@ -60,6 +62,9 @@ int main() {
 		case '6':
 			//std::cout << Power(0.01, -7) << std::endl;
 			std::cout << Power_1(0.01, -7) << std::endl;
+		case '7':
+			//PrintNumber("0000001");
+			Print1ToMaxOfDigits(3);
 		case 'q':
 			break;
 		}

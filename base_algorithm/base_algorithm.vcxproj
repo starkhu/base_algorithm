@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="big_number.h" />
     <ClInclude Include="binary_operation.h" />
     <ClInclude Include="binary_search.h" />
     <ClInclude Include="dynamic_planning.h" />
@@ -27,6 +28,7 @@
     <ClInclude Include="sort.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="big_number.cpp" />
     <ClCompile Include="binary_operation.cpp" />
     <ClCompile Include="binary_search.cpp" />
     <ClCompile Include="dynamic_planning.cpp" />
