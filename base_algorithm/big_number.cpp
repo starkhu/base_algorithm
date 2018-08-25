@@ -2,7 +2,6 @@
 
 void PrintNumber(char* num) {
 	int len = strlen(num);
-	std::cout << "len is: " << len << std::endl;
 	int index = 0;
 	while (index <= len - 2) {
 		if (num[index] == '0') {
@@ -13,7 +12,6 @@ void PrintNumber(char* num) {
 			break;
 		}
 	}
-	std::cout << "index is: " << index << std::endl;
 	for (int i = index; i <= len - 1; i++)
 		std::cout << num[i];
 	std::cout << std::endl;
