@@ -7,6 +7,7 @@
 #include"binary_operation.h"
 #include"power.h"
 #include"big_number.h"
+#include"regular_expression.h"
 
 void CountTime(int t,void (*base_function)(int t)) {
 	clock_t start, end;  
@@ -26,6 +27,7 @@ void PrintOptions() {
 	std::cout << "5: binary operaion test" << std::endl;
 	std::cout << "6: power test" << std::endl;
 	std::cout << "7: big number test" << std::endl;
+	std::cout << "8: regular expression test" << std::endl;
 }
 
 int main() {
@@ -65,6 +67,8 @@ int main() {
 		case '7':
 			//PrintNumber("0000001");
 			Print1ToMaxOfDigits(3);
+		case '8':
+			RM_Test();
 		case 'q':
 			break;
 		}

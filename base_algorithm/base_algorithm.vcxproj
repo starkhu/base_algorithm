@@ -25,6 +25,7 @@
     <ClInclude Include="dynamic_planning.h" />
     <ClInclude Include="power.h" />
     <ClInclude Include="recursive_test.h" />
+    <ClInclude Include="regular_expression.h" />
     <ClInclude Include="sort.h" />
   </ItemGroup>
   <ItemGroup>
@@ -35,6 +36,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="power.cpp" />
     <ClCompile Include="recursive_test.cpp" />
+    <ClCompile Include="regular_expression.cpp" />
     <ClCompile Include="sort.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

@@ -36,6 +36,9 @@
     <ClInclude Include="big_number.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="regular_expression.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="recursive_test.cpp">
@@ -60,6 +63,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="big_number.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="regular_expression.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
